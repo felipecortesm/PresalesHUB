@@ -1,0 +1,23 @@
+# Editar archivo etc/hosts en windows: 
+# Se encuentra en la carpeta C:\Windows\System32\drivers\etc
+# Añadir al final del fichero:
+
+127.0.0.1 		dev.presaleshub.com
+
+# Instalar Backend:
+
+composer install
+npm install
+
+# Ejecutar Backend:
+
+php artisan serve --host dev.presaleshub.com
+
+
+# Instalar FrontEnd:
+
+npm install
+
+# Ejecutar FrontEnd:
+
+npm run serve

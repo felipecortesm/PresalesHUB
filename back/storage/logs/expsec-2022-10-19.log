@@ -1,0 +1,42 @@
+[2022-10-19 11:20:59] local.ERROR: felipecortesm51@gmail.com  
+[2022-10-19 11:20:59] local.ERROR: Las credenciales son incorrectas (401) - [/api/login]  
+[2022-10-19 11:49:31] local.ERROR: felipe.cortes@experienceis.es  
+[2022-10-19 11:49:31] local.ERROR: Debe establecer nueva constraseña (999) - [/api/login]  
+[2022-10-19 11:51:55] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 11:51:55] local.INFO: Contraseña modificada  
+[2022-10-19 11:51:55] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 11:51:55] local.INFO: Acceso correcto  
+[2022-10-19 11:54:29] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 11:54:29] local.INFO: Cerrada sesion  
+[2022-10-19 11:54:50] local.ERROR: felipe.cortes@experienceis.es  
+[2022-10-19 11:54:50] local.ERROR: Las credenciales son incorrectas (401) - [/api/login]  
+[2022-10-19 11:54:58] local.ERROR: felipe.cortes@experienceis.es  
+[2022-10-19 11:54:58] local.ERROR: Las credenciales son incorrectas (401) - [/api/login]  
+[2022-10-19 11:55:06] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 11:55:06] local.INFO: Acceso correcto  
+[2022-10-19 11:56:44] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 11:56:44] local.INFO: Cerrada sesion  
+[2022-10-19 11:58:36] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 11:58:36] local.INFO: Acceso correcto  
+[2022-10-19 12:06:21] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 12:06:21] local.INFO: Cerrada sesion  
+[2022-10-19 12:09:23] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 12:09:23] local.INFO: Acceso correcto  
+[2022-10-19 12:13:30] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 12:13:30] local.INFO: Cerrada sesion  
+[2022-10-19 12:13:45] local.ERROR: felipe.cortes@experienceis.es  
+[2022-10-19 12:13:45] local.ERROR: Las credenciales son incorrectas (401) - [/api/login]  
+[2022-10-19 12:14:03] local.ERROR: felipe.cortes@experienceis.es  
+[2022-10-19 12:14:03] local.ERROR: Las credenciales son incorrectas (401) - [/api/login]  
+[2022-10-19 12:37:09] local.ERROR: felipe.cortes@experienceis.es  
+[2022-10-19 12:37:09] local.ERROR: Las credenciales son incorrectas (401) - [/api/login]  
+[2022-10-19 12:37:17] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 12:37:17] local.INFO: Acceso correcto  
+[2022-10-19 12:37:48] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 12:37:48] local.INFO: Cerrada sesion  
+[2022-10-19 12:54:15] local.ERROR: felipe.cortes@experienceis.es  
+[2022-10-19 12:54:15] local.ERROR: Las credenciales son incorrectas (401) - [/api/login]  
+[2022-10-19 12:54:29] local.ERROR: felipe.cortes@experienceis.es  
+[2022-10-19 12:54:29] local.ERROR: Las credenciales son incorrectas (401) - [/api/login]  
+[2022-10-19 13:33:20] local.INFO: felipe.cortes@experienceis.es  
+[2022-10-19 13:33:20] local.INFO: Acceso correcto  

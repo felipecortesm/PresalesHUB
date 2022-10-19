@@ -1,0 +1,163 @@
+Xdebug Visual Studio 
+
+1) Seguir los pasos: 
+
+Copiar salida de $php-i y pegar en la web de https://xdebug.org/wizard 
+
+Descargar la dll que nos dice (en mi caso php_xdebug-3.1.5-7.4-vc15-x86_64.dll) 
+
+Renombrar la dll por php_xdebug.dll 
+
+Copiar la dll en la ruta C:\xampp\php\ext 
+
+Crear carpeta y archivo log para xdebug -> C:\xampp\tmp\xdebug\xdebug.log 
+
+  
+
+2) Modificar php.ini añadiendo al final: 
+
+[Xdebug]  
+
+xdebug.mode=debug 
+
+xdebug.start_with_request=Yes 
+
+xdebug.client_port=9001 
+
+xdebug.remote_port=9001 
+
+xdebug.log="C:\xampp\tmp\xdebug\xdebug.log" 
+
+xdebug.idekey=VSCODE 
+
+xdebug.remote_enable=1 
+
+xdebug.remote_autostart=1 
+
+xdebug.client_host="127.0.0.1" 
+
+zend_extension="C:\xampp\php\ext\php_xdebug.dll" 
+
+  
+
+3) En VisualStudio crear de cero el fichero de configuracion para debug, para ello: 
+
+Creamos un archivo .php o abrimos uno existente y pulsamos F5 o en el menú Run->Start Debugging 
+
+En la sección de debug en la parte izquierda pulsamos en "create a launch.json file" 
+
+  
+
+4)Modificamos el nuevo fichero lauch.json para indicar en la sección Listen for Xdebug el mismo puerto que definimos en php.ini 
+
+  
+
+Ejemplo: 
+
+.vscode/launch.json 
+
+#################### 
+
+{ 
+
+    // Use IntelliSense to learn about possible attributes. 
+
+    // Hover to view descriptions of existing attributes. 
+
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387 
+
+    "version": "0.2.0", 
+
+    "configurations": [ 
+
+        { 
+
+            "name": "Listen for Xdebug", 
+
+            "type": "php", 
+
+            "request": "launch", 
+
+            "port": 9001 // Tiene que ser el mismo que definimos en php.ini 
+
+        }, 
+
+        { 
+
+            "name": "Launch currently open script", 
+
+            "type": "php", 
+
+            "request": "launch", 
+
+            "program": "${file}", 
+
+            "cwd": "${fileDirname}", 
+
+            "port": 0, 
+
+            "runtimeArgs": [ 
+
+                "-dxdebug.start_with_request=yes" 
+
+            ], 
+
+            "env": { 
+
+                "XDEBUG_MODE": "debug,develop", 
+
+                "XDEBUG_CONFIG": "client_port=${port}" 
+
+            } 
+
+        }, 
+
+        { 
+
+            "name": "Launch Built-in web server", 
+
+            "type": "php", 
+
+            "request": "launch", 
+
+            "runtimeArgs": [ 
+
+                "-dxdebug.mode=debug", 
+
+                "-dxdebug.start_with_request=yes", 
+
+                "-S", 
+
+                "localhost:0" 
+
+            ], 
+
+            "program": "", 
+
+            "cwd": "${workspaceRoot}", 
+
+            "port": 9003, 
+
+            "serverReadyAction": { 
+
+                "pattern": "Development Server \\(http://localhost:([0-9]+)\\) started", 
+
+                "uriFormat": "http://localhost:%s", 
+
+                "action": "openExternally" 
+
+            } 
+
+        } 
+
+    ] 
+
+} 
+
+  
+
+5) Ejecutar debug para un fichero en concreto o en ejecución de php atisan serve: 
+
+En la sección de debug en la parte izquierda podemos indicar el debugger que queremos usar,  
+
+Ejecutar Listen for Xdebug ( php artisan serve ) para acceder de forma normal a través de las peticiones CRUD en Laravel, después en VSCODE aparecerá en el debug los breakpoints 

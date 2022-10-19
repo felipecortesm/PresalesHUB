@@ -1,0 +1,14 @@
+Proxy-Authorization header
+--------------------------
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization
+
+Sending credentials to a server behind a proxy is the same of sending them directly to the server.
+Basic authentication is contained into Proxy-Authorization header, as a base64-encoded colon-separated username and password.
+I am assuming that you want to manually craft the authorization value.
+Follow these steps (given username john and password qwerty):
+- Join username and password with a colon: john:qwerty
+- Base64-encode the whole string: am9objpxd2VydHk=
+- Put the encoded string into the Proxy-Authorization header. Append this to your HTTP request: Proxy-Authorization: Basic am9objpxd2VydHk=
+
+This should work out of the box with the majority of proxy servers.
+

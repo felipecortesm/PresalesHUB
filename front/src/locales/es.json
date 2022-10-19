@@ -1,0 +1,25 @@
+{
+  "test": {
+    "welcome": "Bienvenido a la aplicacion de prueba de Vue..."
+  },
+  "cookie": {
+    "titulo": "POLÍTICA DE COOKIES",
+    "linea1": "Utilizamos cookies propias para fines estrictamente funcionales para la navegación en la web. Pulse el botón Aceptar para confirmar que ha leído y aceptado la información presentada. Si no acepta la política de cookies no podrá utilizar la aplicación."
+  },
+  "header": {
+    "text": "PresalesHUB"
+  },
+  "footer": {
+    "copyright": "© 2022Experience Ingeniería y Servicios S.L. Todos los derechos reservados.",
+    "terminos_uso": "Responsable del sitio",
+    "privacidad": "Declaración de privacidad",
+    "cookies": "Información sobre cookies"
+  },
+  "general": {
+    "datos_ok": "Mensaje correcto!!"
+  },
+  "auth": {
+    "err_no_coinciden": "Contraseñas no coinciden",
+    "err_caracteres_especiales": "La contraseña debe tener al menos 8 posiciones, mayúsculas, minúsculas, números y algún carácter especial"
+  }
+}

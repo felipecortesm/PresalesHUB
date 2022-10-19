@@ -1,0 +1,31 @@
+composer require krlove/eloquent-model-generator --dev
+
+-- Generar las clases del modelo de datos
+--
+php artisan krlove:generate:model PrProceso --table-name=pr_proceso --output-path=Models --namespace=App\Models --no-timestamps
+
+-- Otras opciones
+--
+no-timestamps -> añade public $timestamps = false;
+date-format   -> especifica dateFormat property
+connection    -> especifica connection name property
+
+php artisan krlove:generate:model Calendario --table-name=calendario --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Cita --table-name=citas --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Correo --table-name=correo --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model CorreoEstado --table-name=correo_estado --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Envio --table-name=envios --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Estado --table-name=estados --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Parametro --table-name=parametros --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Pedido --table-name=pedidos --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Perfil --table-name=perfiles --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Referencia --table-name=referencia --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Sede --table-name=sedes --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model TerminalPedido --table-name=terminal_pedidos --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model TerminalUsuario --table-name=terminal_usuarios --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Terminal --table-name=terminales --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Usuario --table-name=usuarios --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model HistPedido --table-name=historico_pedidos --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model HistEnvio --table-name=historico_envios --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Ccaa --table-name=ccaa --output-path=Models --namespace=App\Models --no-timestamps
+php artisan krlove:generate:model Festivo --table-name=festivos --output-path=Models --namespace=App\Models --no-timestamps

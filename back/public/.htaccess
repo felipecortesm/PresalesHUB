@@ -1,0 +1,38 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+#    <IfModule mod_headers.c>
+#      # https://cylab.be/blog/155/harden-your-laravel-app-with-csp-headers
+#      Header set Content-Security-Policy "default-src 'self'; style-src 'self'; object-src 'none'; form-action 'self'; font-src 'self'"
+#      Header set Content-Security-Policy "default-src 'self'; font-src *;img-src * data:; script-src *; style-src *;"
+#    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Posible error de redireccion
+#   RewriteCond %{ENV:REDIRECT_STATUS} 100
+#   RewriteRule ^ /index.html [L]
+
+    # Rewrite anything that starts with 'api' to the laravel index file
+    RewriteCond %{REQUEST_URI} ^/api
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ /api/public/index.php [L]
+
+  	# Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+  	# Send Requests To Front...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ /index.html [L]
+
+</IfModule>
